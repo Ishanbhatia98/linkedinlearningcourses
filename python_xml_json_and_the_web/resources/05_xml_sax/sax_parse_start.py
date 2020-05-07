@@ -4,20 +4,22 @@ import requests
 import xml.sax
 
 # TODO: define the ContentHandler subclass for our content
+
+
 class MyContentHandler(xml.sax.ContentHandler):
     def __init__(self):
         self.slideCount = 0
         self.itemCount = 0
 
-    #TODO: Handle startElement
+    # TODO: Handle startElement
 
-    #TODO: Handle endElement
+    # TODO: Handle endElement
 
-    #TODO: Handle text data
+    # TODO: Handle text data
 
-    #TODO: Handle startDocument
+    # TODO: Handle startDocument
 
-    #TODO: Handle endDocument
+    # TODO: Handle endDocument
 
 
 def main():
@@ -28,9 +30,8 @@ def main():
     # remember that Requests auto-decodes our content
     url = "http://httpbin.org/xml"
     result = requests.get(url)
-
+    print(result.text)
     # TODO: call the parseString method on the XML text content received
-    
 
     # when we're done, print out some interesting results
     print("There were {0} slide elements".format(handler.slideCount))
